@@ -179,6 +179,8 @@ yesterday = now - timedelta(days=1)
 print("Yesterday's date:", yesterday)
 ftime=now + timedelta(hours=5, minutes=30)
 print("Time after 5 hours and 30 minutes:", ftime)
+format_12hr = now.strftime("%I:%M %p")
+print("Current time in 12-hour format:", format_12hr)
 
 Output:
 
@@ -194,4 +196,5 @@ Time difference: 5 days, 3:30:00
 Tomorrow's date: 2025-07-01 11:59:44.550186
 Yesterday's date: 2025-06-29 11:59:44.550186
 Time after 5 hours and 30 minutes: 2025-06-30 17:35:11.465188
+Current time in 12-hour format: 12:10 PM
 -------------------------------------------------------------------------------------
