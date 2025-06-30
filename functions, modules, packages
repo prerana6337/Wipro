@@ -119,7 +119,8 @@ print("Random integer from 1 to 100:", random.randint(1, 100))
 print("Random integer from 1 to 100 with step 5:", random.randrange(1, 101, 5))
 #for generating random numbers with a normal distribution
 print("Random number with normal distribution (mean=0, stddev=1):", random.gauss(0, 1))
-
+random.seed(42)  # Setting a seed for reproducibility
+print("Random number with seed 42:", random.randint(1, 10))
 
 Output:
 
@@ -132,9 +133,62 @@ Shuffled list: ['apple', 'cherry', 'banana']
 Random integer from 1 to 100: 35
 Random integer from 1 to 100 with step 5: 56
 Random number with normal distribution (mean=0, stddev=1): -1.0889631377036433
+Random number with seed 42: 2
 ------------------------------------------------------------------------
+datetime
+datetime.now()
+datetime.strptime()
+epoch-----(basic unique time)
+datetime.strftime
+timedelta
+date.today()
+datetime.date
 
+Program:
 
+from datetime import datetime, timedelta, timezone,date
+#current time and date
+now=datetime.now()
+print("Current date and time:", now)
+#only date
+today = date.today()
+print("Today's date:", today)
+#current time
+current_time = now.strftime("%H:%M:%S") 
+print("Current time:", current_time)
+#current month year and day
+current_month = now.strftime("%B")
+print("Current month:", current_month)
+current_year = now.strftime("%Y")   
+print("Current year:", current_year)
+current_day = now.strftime("%A")
+print("Current day:", current_day)
+#formatted date time
+formatted_date_time = now.strftime("%Y-%m-%d %H:%M:%S")
+print("Formatted date and time:", formatted_date_time)
+#parsed date time
+parsed_date_time = datetime.strptime("30-06-2025 11:54:45", "%d-%m-%Y %H:%M:%S")
+print("Parsed date and time:", parsed_date_time)    
+#timedelta
+time_difference = timedelta(days=5, hours=3, minutes=30)
+print("Time difference:", time_difference)
+tomorrow=now + timedelta(days=1)
+print("Tomorrow's date:", tomorrow)
+#yesterday
+yesterday = now - timedelta(days=1)
+print("Yesterday's date:", yesterday)
 
+Output:
 
-
+Current date and time: 2025-06-30 11:59:44.550186
+Today's date: 2025-06-30
+Current time: 11:59:44
+Current month: June
+Current year: 2025
+Current day: Monday
+Formatted date and time: 2025-06-30 11:59:44
+Parsed date and time: 2025-06-30 11:54:45
+Time difference: 5 days, 3:30:00
+Tomorrow's date: 2025-07-01 11:59:44.550186
+Yesterday's date: 2025-06-29 11:59:44.550186
+-------------------------------------------------------------------------------------
