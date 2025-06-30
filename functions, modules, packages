@@ -1,1 +1,140 @@
+MODULES
+--------------------
+-math
+-random
+-datetime
+-calendar
+-json----normalise the data (serializing)
+---------------------
+Directory modules
+-.csv
+-sqlite3----accessing database and to store data
+-os module
+-collections
+-regex (import re)
+-itertools (permutation, combination)
+--------------------
+Functions in math module
+Program:
+
+import math
+n=int(input("Enter the number:"))
+print("Square root of number:",math.sqrt(n))
+print("Factorial of number:",math.factorial(n))
+print("Logarithm of number:",math.log(n))
+print("Sine of number:",math.sin(n))
+print("Cosine of number:",math.cos(n))  
+print("Tangent of number:",math.tan(n))
+print("Exponential of number:",math.exp(n))
+print("Power of number (n^2):",math.pow(n, 2))
+print("Ceiling of number:",math.ceil(n))
+print("Floor of number:",math.floor(n))
+print("Rounding of number:",round(n))
+print("Degrees to Radians:",math.radians(n))
+print("Radians to Degrees:",math.degrees(n))
+print("Greatest Common Divisor (GCD) of number and 10:",math.gcd(n, 10))
+print("Least Common Multiple (LCM) of number and 10:",math.lcm(n, 10) if hasattr(math, 'lcm') else "LCM not available in this version of Python")
+print("Is NaN (Not a Number):",math.isnan(n))   
+print("Is Infinite:",math.isinf(n))
+print("Hyperbolic Sine of number:",math.sinh(n))
+print("Hyperbolic Cosine of number:",math.cosh(n))
+print("Hyperbolic Tangent of number:",math.tanh(n))
+print("Modulus of number with 10:",math.fmod(n, 10))
+print("Angle in Radians:",math.atan(n))     
+print("Angle in Degrees:",math.degrees(math.atan(n)))
+print("Angle in Radians from Degrees:",math.radians(math.degrees(n)))
+print("Angle in Degrees from Radians:",math.degrees(math.radians(n)))
+print("Pi constant:",math.pi)
+print("Euler's number (e):",math.e)
+print("Gamma function of number:",math.gamma(n))
+print("Beta function of number and 2:",math.beta(n, 2) if hasattr(math, 'beta') else "Beta function not available in this version of Python")
+print("Combinations of number taken 2 at a time:",math.comb(n,10))
+print("Permutations of number taken 2 at a time:",math.perm(n,10) if hasattr(math, 'perm') else "Permutations not available in this version of Python")
+print("Next after number in floating point:",math.nextafter(n, n+1))
+print("Next after number in floating point (towards zero):",math.nextafter(n, 0))
+
+Output:
+
+Enter the number:5
+Square root of number: 2.23606797749979
+Factorial of number: 120
+Logarithm of number: 1.6094379124341003
+Sine of number: -0.9589242746631385
+Cosine of number: 0.28366218546322625
+Tangent of number: -3.380515006246586
+Exponential of number: 148.4131591025766
+Power of number (n^2): 25.0
+Ceiling of number: 5
+Floor of number: 5
+Rounding of number: 5
+Degrees to Radians: 0.08726646259971647
+Radians to Degrees: 286.4788975654116
+Greatest Common Divisor (GCD) of number and 10: 5
+Least Common Multiple (LCM) of number and 10: 10
+Is NaN (Not a Number): False
+Is Infinite: False
+Hyperbolic Sine of number: 74.20321057778875
+Hyperbolic Cosine of number: 74.20994852478785
+Hyperbolic Tangent of number: 0.9999092042625951
+Modulus of number with 10: 5.0
+Angle in Radians: 1.373400766945016
+Angle in Degrees: 78.69006752597979
+Angle in Radians from Degrees: 5.0
+Angle in Degrees from Radians: 5.0
+Pi constant: 3.141592653589793
+Euler's number (e): 2.718281828459045
+Gamma function of number: 24.0
+Beta function of number and 2: Beta function not available in this version of Python
+Combinations of number taken 2 at a time: 0
+Permutations of number taken 2 at a time: 0
+Next after number in floating point: 5.000000000000001
+Next after number in floating point (towards zero): 4.999999999999999
+-------------------------------------------------------------------------------------------------------------
+#random-----generate numbers,random choices
+randint(x,y)
+choice
+shuffle [1,2,3,4,5]
+random.sample
+-----------------------------------------
+Program:
+
+import random
+#from random import randint
+print("Random number from 1 to 10:", random.randint(1, 10))
+#random.random()-------dynamically used
+print("Random float from 0 to 1:", random.random())
+#for floating random number(uniform distribution)
+print("Random number from 1.5 to 5.0:", random.uniform(1.5, 5.0))
+#for random choice from a list
+my_list = ['apple', 'banana', 'cherry']
+print("Random choice from list:", random.choice(my_list))
+#for random sample from a list
+print("Random sample of 2 from list:", random.sample(my_list, 2))
+#for shuffling a list
+random.shuffle(my_list)
+print("Shuffled list:", my_list)
+#for generating random integers within a range
+print("Random integer from 1 to 100:", random.randint(1, 100))
+#for generating random integers within a range with step
+print("Random integer from 1 to 100 with step 5:", random.randrange(1, 101, 5))
+#for generating random numbers with a normal distribution
+print("Random number with normal distribution (mean=0, stddev=1):", random.gauss(0, 1))
+
+
+Output:
+
+Random number from 1 to 10: 8
+Random float from 0 to 1: 0.8436503230189569
+Random number from 1.5 to 5.0: 1.960474632765012
+Random choice from list: cherry
+Random sample of 2 from list: ['banana', 'apple']
+Shuffled list: ['apple', 'cherry', 'banana']
+Random integer from 1 to 100: 35
+Random integer from 1 to 100 with step 5: 56
+Random number with normal distribution (mean=0, stddev=1): -1.0889631377036433
+------------------------------------------------------------------------
+
+
+
+
 
