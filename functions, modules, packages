@@ -143,6 +143,9 @@ datetime.strftime
 timedelta
 date.today()
 datetime.date
+%I= 0-12 format
+%p= AM or PM
+%H= 0->23.59.59.00000 (sec-milli-micro-nano)
 
 Program:
 
