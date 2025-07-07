@@ -1,0 +1,35 @@
+IO operations/ handling
+ASCII test.files- reading writing
+append char- ABC
+funcion fr opening and closing the file
+syn:
+fileobj=open(fileename[,access_mode])
+----accessmodes----
+r - default mode for opening a file for reading only
+rb - opens file in binary format  
+r+ - opens both readin and writing
+rb+ - opens both reading and writing binary format 
+w - default mode for opening a file to write
+wb - writing mode in binary format
+w+ - reading/writing
+wb+ - both functions in binary format
+a - append opens a file to append data
+
+-----when destination is not provided, it creates a new file
+file obj attributes
+
+fileobj.closed - ret- return true if the file is closed and false otherwise
+fileobj.mode - opening access_mode
+fileobj.name-returns the file name
+
+close()- manually
+
+file methods
+fileno() - file number in your ool
+flush() - clears the write buffer from i/p
+isatty() - returns boolean output, file stream is
+           interactive or not
+readline(n) - particular line
+truncate(n) - reallocates the file size byte 
+
+
